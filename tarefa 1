@@ -1,0 +1,73 @@
+def somar(num1: int, num2: int) -> int:
+	"""A função vai somar 2 números inteiros e retornar um outro número inteiro como resultado
+	Parâmetros:
+        num1(int): primeiro número inteiro a ser somado
+		num2(int): segundo número inteiro a ser somado
+     
+	Retorno:
+        int: A soma dos dois números inteiros
+    """
+	return num1 + num2
+
+def dividir(num1: int, num2: int) -> float:
+    """A função vai receber 2 números inteirow e dividi-los, resultando em um número float
+    Parâmetros: 
+        num1(int): primeiro número inteiro, dividendo
+		num2(int): segundo número inteiro, divisor
+    Retorno: 
+        float: A divisão dos dois números inteiros
+    Acrescimo:
+        Não é possivel dividir um número por 0
+    """
+    if num2== 0:
+        raise ZeroDivisionError('Não é possível dividir um número por 0')
+    return num1 / num2
+
+def multiplicar(num1: float, num2: float) -> float:
+    """A função recebe dois números float e multiplica eles, obtendo também um float como resultado
+    Parâmetros:
+        num1(int): primeiro número inteiro a ser multiplicado
+		num2(int): segundo número inteiro a ser multiplicado
+    Retorno:
+        float: A multiplicação desses números inteiros
+    """
+    return num1 * num2
+
+def subtrair(num1: int, num2: int) -> int:
+    """A função deve subtrair o segundo número do primeiro, independente de ele ser ou não maior que o 1°
+    Parâmetros:
+        num1(int): primeiro número inteiro a ser subtraído
+		num2(int): segundo número inteiro a ser subtraído
+    Retorno:
+        int: A subtração entre eles
+    """
+    return num1 - num2
+
+def exibir(num1, num2):
+    """A função deve exibir os dois números escolhidos no programa"""
+    print(f'Primeiro número: {num1} ' )
+    print(f'Segundo número: {num2} ' )
+
+def mensagem_pt() -> str:
+    """A função salva uma mensagem de boas-vindas, em lingua portuguesa"""
+    return 'Olá, bem-vindo ao programa de operações matemáticas!'
+
+def mensagem_en() -> str:
+    """A função salva uma mensagem de boas-vindas, em lingua inglesa"""
+    return 'Hello, welcome to the math operations program!'
+
+def boas_vindas() -> str:
+    """A função exibirá a mensagem de boas-vundas na lingua selecionada"""
+    msg = mensagem_pt()
+    print(msg)
+
+##################
+
+num1, num2 = 10, 20
+exibir(num1, num2)
+print(f'{somar(num1, num2) = }')
+print(f'{subtrair(num1, num2) = }')
+print(f'{multiplicar(num1, num2) = }')
+if num2 == 0:
+    print('Erro')
+else: print(f'{dividir(num1, num2) = }')
