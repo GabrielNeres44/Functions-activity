@@ -1,0 +1,109 @@
+def quadrado(lado: float) -> float:
+    """A função deve receber 1 número float e retornar um outro número float que é o primeiro elevado a potência
+    Parâmetros:
+        lado(float): Valor que representa o lado do quadrado
+    Retorno:
+        float: Valor do lado elevado ao quadrado
+    """
+    return lado ** 2
+
+def retangulo(base: float, altura: float) -> float:
+    """A função deve receber 2 números float e retornar um outro número float que é a multiplicação dos dois
+    Parâmetros:
+        base(float): Valor que representa a base da figura
+        altura(float): Valor que representa a altura da figura
+    Retorno:
+        float: Multiplicação dos dois números float
+    """
+    return base * altura
+
+def triangulo(base: float, altura: float) -> float:
+    """A função deve receber 2 números float e retornar um outro número float, resultante da multiplicação entre eles dividido por 2
+    Parâmetros:
+        base(float): Valor que representa a base da figura
+        altura(float): Valor que representa a altura da figura
+    Retorno:
+        float: Multiplicação dos parâmetros, dividido por 2
+    """
+    return (base * altura) / 2
+
+def trapezio(base_menor: float, base_maior: float, altura: float) -> float:
+    """A função deve receber 3 números float e retornar um outro número float, resultante de uma expressão numérica entre eles, dividido por 2
+    Parâmetros:
+        base_menor(float): Valor que representa a base menor da figura
+        base_maior(float): Valor que representa a base maior da figura
+        altura(float): Valor que representa a altura da figura
+    Retorno:
+        float: Multiplicação dos parâmetros, dividido por 2
+    """
+    return ((base_maior + base_menor) * altura) / 2
+
+def paralelogramo(base: float, altura: float) -> float:
+    """A função deve receber 2 números float e retornar um outro número float que é a multiplicação dos dois
+    Parâmetros:
+        base(float): Valor que representa a base da figura
+        altura(float): Valor que representa a altura da figura
+    Retorno:
+        float: Multiplicação dos dois números float
+    """
+    return base * altura
+
+def losango(diagonal_maior: float, diagonal_menor: float) -> float:
+    """A função deve receber 2 números float e retornar um outro número float que é a multiplicação dos dois
+    Parâmetros:
+        diagonal_maior(float): Valor que representa a diagonal maior da figura
+        diagonal_menor(float): Valor que representa a diagonal menor da figura
+    Retorno:
+        float: Multiplicação dos dois números float
+    """
+    return (diagonal_maior * diagonal_menor) / 2
+
+def circulo(raio: float) -> float:
+    """A função vai receber um número float, elevar ao quadrado, e multiplicar pelo valor aproximado de pi
+    Parâmetros:
+        raio(float): Valor que representa o raio do círculo
+    Retorno:
+        float: Valor resultante da expressão de área do círculo
+        """
+    return (raio ** 2) * 3,14159
+
+#############################
+
+tipo = input('Informe a figura geométrica: ')
+
+if tipo == 'quadrado':
+    n1 = float(input('Defina o valor do lado do quadrado: '))
+    soma = quadrado(n1)
+    print(f'Área do quadrado:{soma}')
+elif tipo == 'retangulo':
+    n1 = float(input('Defina o valor da base do retângulo: '))
+    n2 = float(input('Defina o valor da altura do retângulo: '))
+    mult = retangulo(n1, n2)
+    print(f'Área do retângulo: {mult}')
+elif tipo == 'triangulo':
+    n1 = float(input('Defina o valor da base do triângulo: '))
+    n2 = float(input('Defina o valor da altura do triângulo: '))
+    mult = triangulo(n1, n2)
+    print(f'Área do triângulo: {mult}')
+elif tipo == 'trapezio':
+    n1 = float(input('Defina o valor da base menor do trapézio: '))
+    n2 = float(input('Defina o valor da base maior do trapézio: '))
+    n3 = float(input('Defina o valor da altura do trapézio: '))
+    trap = trapezio(n1, n2, n3)
+    print('Área do trapézio: ')
+elif tipo == 'paralelogramo':
+    n1 = float(input('Defina o valor da base do paralelogramo: '))
+    n2 = float(input('Defina o valor da altura do paralelogramo: '))
+    mult = paralelogramo(n1, n2)
+    print(f'Área do paralelogramo: {mult}')
+elif tipo == 'losango':
+    n1 = float(input('Defina o valor da diagonal maior do losango: '))
+    n2 = float(input('Defina o valor da diagonal menor do losango: '))
+    mult = losango(n1, n2)
+    print(f'Área do losango: {mult}')
+elif tipo == 'circulo':
+    n1 = float(input('Defina o valor do raio do círculo: '))
+    result = circulo(n1)
+    print(f'Área do círculo: {result}')
+else:
+    print('Figura geométrica inválida.')
